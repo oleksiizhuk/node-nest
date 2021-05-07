@@ -1357,8 +1357,8 @@
         "affectsGlobalScope": false
       },
       "../src/components/app/app.service.ts": {
-        "version": "eaf8514ce110fa428a93a27408df4d06d133dbd9ed0a775c315ddfdd507853a9",
-        "signature": "653711fba8904aa27fd8911b63cf526e7b334e13a292da4cefdbbe179ac3f3f2",
+        "version": "126209edcc09c53c7ab92afceb5df8b530035b6ff612706877e1e36d59a70e21",
+        "signature": "911bebfeb8d9544ec40a62e262063452d0b80f55aaf6b1349fab0c41d3b70352",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/swagger/dist/decorators/api-basic.decorator.d.ts": {
@@ -1547,8 +1547,8 @@
         "affectsGlobalScope": false
       },
       "../src/components/app/app.controller.ts": {
-        "version": "92af4d29290a9b7a0259063c13fe4ec4708b4de1783f329dbd1d4a14a7cf272f",
-        "signature": "ef022c91ea9e75ab4082f2e881f9c4db7b346be2da706e876b253bebce5e6140",
+        "version": "101781d2ed670ee239cfcde2adb9a71440f5ddf3f8f695fbf26bd7e43d63fa1c",
+        "signature": "3293b0d1d6a7f902316e164fcf36ae099f1bbb0224484586eaab30d9dea78d32",
         "affectsGlobalScope": false
       },
       "../node_modules/class-validator/types/validation/validationerror.d.ts": {
@@ -2167,33 +2167,103 @@
         "affectsGlobalScope": false
       },
       "../src/components/user/dto/userdto.ts": {
-        "version": "3286541da0ee5c8b38cadfa947cbec9958db9125090598ae556eeae204f896e1",
-        "signature": "de185e88b9ae1cc136d7fc5a384bb2583851e54064149b1e9fe62e47b8d54da7",
+        "version": "4b1b1421bfd9bfc304fc195d7729f17fa3adfe8da3d3bb8577c23de1d4714621",
+        "signature": "c178801bb6d39bb586188603ee7ef353d95cd4a8c38c8ec4268ca1566beb223c",
         "affectsGlobalScope": false
       },
       "../src/components/user/user.service.ts": {
-        "version": "f2459a783585c375582c0c37d37a5c2a3d94ba39d7835535df8f5dce222fe93b",
-        "signature": "ea2eabd64c99840fa3b0941cec3dbd545d325db235930a55060b7c3c0fb89e40",
+        "version": "259ddd1654d7cf91169d3ffb8773ced09c28653c9d6b756c6660124c3e9246b1",
+        "signature": "47ac56bd76f5fe5b1b9ad615d675b83ad926f0378deffb7444e2f8bca3a5ae5e",
         "affectsGlobalScope": false
       },
       "../src/components/user/user.controller.ts": {
-        "version": "56f0b9e0668c25a98c62454ef9ea6a439642e628653f30f7d092e02428680ad8",
-        "signature": "7cfcc3e693aa7bbe3b02a0b89f5a7c142493f7ee95f15b8cee85b735f71fd477",
+        "version": "3c493a0b2103c9cd2415068de91332ce26676116ba8b75eb9fcf48df6a48668d",
+        "signature": "7691e93a1925e7f450896cefb7663051c7178514e82600158942fd0eb8599f9f",
         "affectsGlobalScope": false
       },
       "../src/components/user/user.module.ts": {
-        "version": "206c6de43a8a0dbcc2f425c9eb05d759396bab71f94bfadfb5aa152410cd3139",
-        "signature": "482b8f0d35a3d453500a15b6c6057c1e4c40baa4329b39da9e1026d8e1de4329",
+        "version": "3b41434e0990c6eeaa8a475e4e210a45798219d9e360ed76238760dd4679d31a",
+        "signature": "9e36626cb39f17790cf2403e2e54d8a74542da63e2a49aba7061133a1af26dcd",
+        "affectsGlobalScope": false
+      },
+      "../src/components/auth/dto/create-auth.dto.ts": {
+        "version": "45b4c2a08247338cf2abf0734b4fb895fa1fbaee85a46d0f1dd6d4b7ce7cc2de",
+        "signature": "a006ea0a9caa9ca6b1eec2ba380d7ba2e5ea6f3c796f410817e947632f4e1c4e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/mapped-types/dist/mapped-type.interface.d.ts": {
+        "version": "2bad09c4dc0810666ef5b6150aa910dd711051ce5f2184050c9859c708092a36",
+        "signature": "2bad09c4dc0810666ef5b6150aa910dd711051ce5f2184050c9859c708092a36",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/mapped-types/dist/intersection-type.helper.d.ts": {
+        "version": "f9466e9b33fddf349c95d02835d174b946f1e81d61b72100d91ce5ff2f9abe3b",
+        "signature": "f9466e9b33fddf349c95d02835d174b946f1e81d61b72100d91ce5ff2f9abe3b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/mapped-types/dist/omit-type.helper.d.ts": {
+        "version": "c938dac97b83703e7bd03862b5bc558425acc9f16ad9e24220771df184d25fcf",
+        "signature": "c938dac97b83703e7bd03862b5bc558425acc9f16ad9e24220771df184d25fcf",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/mapped-types/dist/partial-type.helper.d.ts": {
+        "version": "8941525aa2f1e097f0352e586bb9c755e2d533e9945508b7518346759b26e1b8",
+        "signature": "8941525aa2f1e097f0352e586bb9c755e2d533e9945508b7518346759b26e1b8",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/mapped-types/dist/pick-type.helper.d.ts": {
+        "version": "8acfefd1aec7626a3016ce7e82e3ac1a0e5b57248cffd8255b833503c29954c7",
+        "signature": "8acfefd1aec7626a3016ce7e82e3ac1a0e5b57248cffd8255b833503c29954c7",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/mapped-types/dist/type-helpers.utils.d.ts": {
+        "version": "3cf73a203d499608e5b91d0c8f6ec729a39dd547cc2651a0d4647cdb420cc1fc",
+        "signature": "3cf73a203d499608e5b91d0c8f6ec729a39dd547cc2651a0d4647cdb420cc1fc",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/mapped-types/dist/index.d.ts": {
+        "version": "17f1d99666811b576261c5c9399cf2a643220188d6dcd0e6fe605a68a696d2c8",
+        "signature": "17f1d99666811b576261c5c9399cf2a643220188d6dcd0e6fe605a68a696d2c8",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/mapped-types/index.d.ts": {
+        "version": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
+        "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
+        "affectsGlobalScope": false
+      },
+      "../src/components/auth/dto/update-auth.dto.ts": {
+        "version": "9a4d3942c4caa4605555350b9c7af8f44d27f41254c3e8edcb4fc0bb2c164fdb",
+        "signature": "3c3166ff69cf41f6a7095073d5cbe41a307ebb3163856f7f591695098b9be641",
+        "affectsGlobalScope": false
+      },
+      "../src/components/auth/auth.service.ts": {
+        "version": "ebc840eb6aee12089c96d29c3e7ce2120e20da8382381fa121cceef3b3fcc16d",
+        "signature": "d9f21501c85e297f43a797b983ede8317a68bfab8a945634012715a9c30b81a7",
+        "affectsGlobalScope": false
+      },
+      "../src/components/auth/auth.controller.ts": {
+        "version": "dc602349cf425dcbf7ba9aa810b536bb29fa29f6dcfc6ca81573ee4caa99cbb0",
+        "signature": "ef6d87fc23dc25e98bf0aa1ec9da538b87d658776c5bc9628401c4a8d913145e",
+        "affectsGlobalScope": false
+      },
+      "../src/components/auth/auth.module.ts": {
+        "version": "3a08d76d43f5010119be06532300711c31206e115fdb757a886917f2d59fd51a",
+        "signature": "2e5d258cf85349b02b015c3f1b8873c152d182c3819a7ccc3aff16fc3037a5fc",
         "affectsGlobalScope": false
       },
       "../src/components/app/app.module.ts": {
-        "version": "8084e27c6ed3de9abe1ebe4e63da2cf6c4d556f431233fc6939bfee6f0b87ab4",
-        "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
+        "version": "a18b098ecbf91431d89ca5ef9c279312b72aa60f449fe2a134297dc9be120f89",
+        "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88",
         "affectsGlobalScope": false
       },
       "../src/main.ts": {
-        "version": "9acd3ebe923ef0521963a09cbc7b3b37eaf9cd9e8d8f845743358c41f7a2a9f0",
-        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+        "version": "af481998eb5b0099e3525fa18d67b5170d6d6bb216f32e0447890feb7d06db95",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
+        "affectsGlobalScope": false
+      },
+      "../src/components/auth/entities/auth.entity.ts": {
+        "version": "52320da8efbf293927312346beae923559bd9f7373806959e880588f0b1c7d72",
+        "signature": "e8c7c39dc9de6e5290bd6d43ab58c5cc48f4357fb15aa7a061e5971b8ca33a18",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/anymatch/index.d.ts": {
@@ -3380,6 +3450,39 @@
       ],
       "../node_modules/@nestjs/core/services/reflector.service.d.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../node_modules/@nestjs/mapped-types/dist/index.d.ts": [
+        "../node_modules/@nestjs/mapped-types/dist/intersection-type.helper.d.ts",
+        "../node_modules/@nestjs/mapped-types/dist/mapped-type.interface.d.ts",
+        "../node_modules/@nestjs/mapped-types/dist/omit-type.helper.d.ts",
+        "../node_modules/@nestjs/mapped-types/dist/partial-type.helper.d.ts",
+        "../node_modules/@nestjs/mapped-types/dist/pick-type.helper.d.ts",
+        "../node_modules/@nestjs/mapped-types/dist/type-helpers.utils.d.ts"
+      ],
+      "../node_modules/@nestjs/mapped-types/dist/intersection-type.helper.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mapped-types/dist/mapped-type.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/mapped-types/dist/mapped-type.interface.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../node_modules/@nestjs/mapped-types/dist/omit-type.helper.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mapped-types/dist/mapped-type.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/mapped-types/dist/partial-type.helper.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mapped-types/dist/mapped-type.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/mapped-types/dist/pick-type.helper.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mapped-types/dist/mapped-type.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/mapped-types/dist/type-helpers.utils.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../node_modules/@nestjs/mapped-types/index.d.ts": [
+        "../node_modules/@nestjs/mapped-types/dist/index.d.ts"
       ],
       "../node_modules/@nestjs/swagger/dist/decorators/api-body.decorator.d.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -4622,10 +4725,35 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/components/app/app.controller.ts",
         "../src/components/app/app.service.ts",
+        "../src/components/auth/auth.module.ts",
         "../src/components/user/user.module.ts"
       ],
       "../src/components/app/app.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/components/auth/auth.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/components/auth/auth.service.ts",
+        "../src/components/auth/dto/create-auth.dto.ts",
+        "../src/components/auth/dto/update-auth.dto.ts"
+      ],
+      "../src/components/auth/auth.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/components/auth/auth.controller.ts",
+        "../src/components/auth/auth.service.ts"
+      ],
+      "../src/components/auth/auth.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/components/auth/dto/create-auth.dto.ts",
+        "../src/components/auth/dto/update-auth.dto.ts"
+      ],
+      "../src/components/auth/dto/create-auth.dto.ts": [
+        "../node_modules/@nestjs/swagger/index.d.ts",
+        "../node_modules/class-validator/types/index.d.ts"
+      ],
+      "../src/components/auth/dto/update-auth.dto.ts": [
+        "../node_modules/@nestjs/mapped-types/index.d.ts",
+        "../src/components/auth/dto/create-auth.dto.ts"
       ],
       "../src/components/user/dto/userdto.ts": [
         "../node_modules/@nestjs/swagger/index.d.ts",
@@ -5277,6 +5405,39 @@
       ],
       "../node_modules/@nestjs/core/services/reflector.service.d.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../node_modules/@nestjs/mapped-types/dist/index.d.ts": [
+        "../node_modules/@nestjs/mapped-types/dist/intersection-type.helper.d.ts",
+        "../node_modules/@nestjs/mapped-types/dist/mapped-type.interface.d.ts",
+        "../node_modules/@nestjs/mapped-types/dist/omit-type.helper.d.ts",
+        "../node_modules/@nestjs/mapped-types/dist/partial-type.helper.d.ts",
+        "../node_modules/@nestjs/mapped-types/dist/pick-type.helper.d.ts",
+        "../node_modules/@nestjs/mapped-types/dist/type-helpers.utils.d.ts"
+      ],
+      "../node_modules/@nestjs/mapped-types/dist/intersection-type.helper.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mapped-types/dist/mapped-type.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/mapped-types/dist/mapped-type.interface.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../node_modules/@nestjs/mapped-types/dist/omit-type.helper.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mapped-types/dist/mapped-type.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/mapped-types/dist/partial-type.helper.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mapped-types/dist/mapped-type.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/mapped-types/dist/pick-type.helper.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mapped-types/dist/mapped-type.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/mapped-types/dist/type-helpers.utils.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../node_modules/@nestjs/mapped-types/index.d.ts": [
+        "../node_modules/@nestjs/mapped-types/dist/index.d.ts"
       ],
       "../node_modules/@nestjs/swagger/dist/decorators/api-body.decorator.d.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -6513,6 +6674,19 @@
       "../src/components/app/app.controller.ts": [
         "../src/components/app/app.service.ts"
       ],
+      "../src/components/auth/auth.controller.ts": [
+        "../src/components/auth/auth.service.ts",
+        "../src/components/auth/dto/create-auth.dto.ts",
+        "../src/components/auth/dto/update-auth.dto.ts"
+      ],
+      "../src/components/auth/auth.service.ts": [
+        "../src/components/auth/dto/create-auth.dto.ts",
+        "../src/components/auth/dto/update-auth.dto.ts"
+      ],
+      "../src/components/auth/dto/update-auth.dto.ts": [
+        "../node_modules/@nestjs/mapped-types/index.d.ts",
+        "../src/components/auth/dto/create-auth.dto.ts"
+      ],
       "../src/components/user/user.controller.ts": [
         "../src/components/user/dto/userdto.ts",
         "../src/components/user/user.service.ts"
@@ -7061,14 +7235,7 @@
       "../node_modules/typescript/lib/lib.es5.d.ts",
       "../node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "../node_modules/typescript/lib/lib.scripthost.d.ts",
-      "../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
-      "../src/components/app/app.controller.ts",
-      "../src/components/app/app.module.ts",
-      "../src/components/user/dto/userdto.ts",
-      "../src/components/user/user.controller.ts",
-      "../src/components/user/user.module.ts",
-      "../src/components/user/user.service.ts",
-      "../src/main.ts"
+      "../node_modules/typescript/lib/lib.webworker.importscripts.d.ts"
     ]
   },
   "version": "4.1.3"

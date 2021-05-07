@@ -3,12 +3,9 @@ import { AppModule } from './components/app/app.module';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { ValidationPipe } from '@nestjs/common';
 
-async function bootstrap() {
-
+const bootstrap = async () =>  {
   const app = await NestFactory.create(AppModule);
-
   app.useGlobalPipes(new ValidationPipe());
-
   const options = new DocumentBuilder()
     .setTitle('Api v1')
     .setDescription('The API for vibe APP')
@@ -16,10 +13,8 @@ async function bootstrap() {
     .addBearerAuth({ in: 'header', type: 'http' })
     .build();
   const document = SwaggerModule.createDocument(app, options);
-
   SwaggerModule.setup('api', app, document);
-
   await app.listen(3000);
-}
+};
 
 bootstrap();
