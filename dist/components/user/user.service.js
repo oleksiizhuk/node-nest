@@ -15,7 +15,7 @@ let UserService = class UserService {
     getUser() {
         return {
             name: 'lesha',
-            age: '27',
+            age: 27,
         };
     }
     createUser(user) {

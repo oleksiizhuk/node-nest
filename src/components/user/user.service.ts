@@ -5,10 +5,10 @@ import { UserDto } from './dto/userDto';
 export class UserService {
   private users: any[] = [];
 
-  getUser(): any {
+  getUser(): UserDto {
     return {
       name: 'lesha',
-      age: '27',
+      age: 27,
     };
   }
 
