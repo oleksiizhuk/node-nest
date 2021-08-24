@@ -28,4 +28,5 @@ export class UserController {
   getUserByEmail(@Param('email') email: string):  Promise<IUser> {
     return this.userService.getUserByEmail(email);
   }
+  
 }
