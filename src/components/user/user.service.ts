@@ -19,8 +19,7 @@ export class UserService {
   }
 
   async createUser(user: UserDto): Promise<IUser> {
-    const createdUser = await this.UserDB.create(user);
-    return createdUser;
+    return await this.UserDB.create(user);
   }
 
   async getUserByEmail(email: string): Promise<IUser> {
