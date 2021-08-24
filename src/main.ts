@@ -8,6 +8,9 @@ const bootstrap = async () =>  {
   const app = await NestFactory.create(AppModule, {cors: false});
   app.use(helmet());
   app.useGlobalPipes(new ValidationPipe());
+  app.enableCors({
+    origin: 'http://localhost:3001'
+  });
   const options = new DocumentBuilder()
     .setTitle('Api v1')
     .setDescription('The API for vibe APP')
@@ -16,7 +19,7 @@ const bootstrap = async () =>  {
     .build();
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('api', app, document);
-  await app.listen(3001);
+  await app.listen(3000);
 };
 
 bootstrap();
