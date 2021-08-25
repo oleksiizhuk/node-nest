@@ -24,4 +24,14 @@ export class UserService {
   async getUserById(id: string): Promise<IUser> {
     return this.UserDB.findById(Types.ObjectId(id));
   }
+
+  async update(id: string, user: UserDto): Promise<IUser> {
+    return this.UserDB.findByIdAndUpdate(Types.ObjectId(id), user, {
+      new: true,
+    });
+  }
+
+  async delete(id: string): Promise<IUser> {
+    return this.UserDB.findByIdAndRemove(Types.ObjectId(id));
+  }
 }
