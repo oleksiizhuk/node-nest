@@ -6,8 +6,6 @@ import {
   Put,
   Param,
   Delete,
-  Header,
-  Redirect,
 } from "@nestjs/common";
 import { AuthService } from "./auth.service";
 import { CreateAuthDto } from "./dto/create-auth.dto";
