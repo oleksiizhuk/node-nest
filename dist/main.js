@@ -10,16 +10,16 @@ const bootstrap = async () => {
     app.use(helmet());
     app.useGlobalPipes(new common_1.ValidationPipe());
     app.enableCors({
-        origin: 'http://localhost:3001'
+        origin: "http://localhost:3001",
     });
     const options = new swagger_1.DocumentBuilder()
-        .setTitle('Api v1')
-        .setDescription('The API for vibe APP')
-        .setVersion('1.0')
-        .addBearerAuth({ in: 'header', type: 'http' })
+        .setTitle("Api v1")
+        .setDescription("The API for vibe APP")
+        .setVersion("1.0")
+        .addBearerAuth({ in: "header", type: "http" })
         .build();
     const document = swagger_1.SwaggerModule.createDocument(app, options);
-    swagger_1.SwaggerModule.setup('api', app, document);
+    swagger_1.SwaggerModule.setup("api", app, document);
     await app.listen(3000);
 };
 bootstrap();

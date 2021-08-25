@@ -2167,7 +2167,7 @@
         "affectsGlobalScope": false
       },
       "../src/components/user/dto/user.dto.ts": {
-        "version": "72da3149ec1ea9bc07899d2cd501a7fc54ee1d05f648adfb0239d4d12155d75f",
+        "version": "085e3f0602e0b70ccdcd362335b289991dd43124e66991265034a690f42fe943",
         "signature": "6d4bc976a8470714955bc5beca7038503f1c087571b94d16d1a9a42d9b69d6a6",
         "affectsGlobalScope": false
       },
@@ -2522,23 +2522,23 @@
         "affectsGlobalScope": false
       },
       "../src/components/user/entities/user.entities.ts": {
-        "version": "908d3a4066324d577bc94f1e9a7080d28b5b7c96b3a8b15848a63f4748455645",
-        "signature": "209094d8bb4f730233b3fbdb374719a3d522b8a9d2b641f3ffbdb2139dde6a58",
+        "version": "95d3abd90c2cb90c1a48ff359df26fb195636859b6c9b05a03d9abded1770062",
+        "signature": "1858a7633e0c73aeb176fe41784ab5ac3ffbab2f5be8d1d20e395f0001c3a721",
         "affectsGlobalScope": false
       },
       "../src/components/user/interfaces/user.interfaces.ts": {
-        "version": "6d4fe16b2a4722f60a6b8d1d79f4aff2acaf185ae2b1329914bc8a89a5b3f541",
+        "version": "323d679e2da54a659b576cd6fe3c35e00dc1f1632317e5ac7c352926b9091598",
         "signature": "6d4fe16b2a4722f60a6b8d1d79f4aff2acaf185ae2b1329914bc8a89a5b3f541",
         "affectsGlobalScope": false
       },
       "../src/components/user/user.service.ts": {
-        "version": "caec9612e8be71ded99dc7c509eab984451b01c172fe19816381fe3643059615",
-        "signature": "726c05cc58cf07154f115d22d9e251aa00fd38cc02fe1c8e57a46b1feae2cc4c",
+        "version": "e39a0efcd2082787f024c1b425e2bd23f93f432ce6fbeb8bd9dca7d20647cacc",
+        "signature": "4853337b9163e985ba33c4ef16e0e6926e9d88a6f9dd1193fcfc009e37202ca1",
         "affectsGlobalScope": false
       },
       "../src/components/user/user.controller.ts": {
-        "version": "44af6240e7fa220aff5e23b7d1ca125668eb5baac4615a9af128cfcd83cf74cd",
-        "signature": "d2c4d504de707cc6261a1a3ae77b75a9e259062d86b3e1ac88089975aa553e75",
+        "version": "93e8204cde49ac076b6bb1e315e740aeb1dad97176b82d03280d92569db05698",
+        "signature": "4f1eafd5a25ea96635980c296a11331e0fdba067d0e615d54dadd1a09658c21e",
         "affectsGlobalScope": false
       },
       "../src/components/user/schema/user.schema.ts": {
@@ -2547,7 +2547,7 @@
         "affectsGlobalScope": false
       },
       "../src/components/user/user.module.ts": {
-        "version": "598d387db36a7c3e0cb707fcda481e4fa6829d1cdc225d6f091808df4c9cfcee",
+        "version": "ac3e427c3497b98e37fdc12c39efcd7cda6b2044a42846ed466b7c7dcceb03a8",
         "signature": "9e36626cb39f17790cf2403e2e54d8a74542da63e2a49aba7061133a1af26dcd",
         "affectsGlobalScope": false
       },
@@ -2617,7 +2617,7 @@
         "affectsGlobalScope": false
       },
       "../src/components/app/app.module.ts": {
-        "version": "8afbb76b8cc9e73d891d5c2b3950c60236fcb0e7dfedfc4f9726f9fa13b9d206",
+        "version": "735b66279c40ab3320752f63d6cd3c77f0b04d19e26a5820abd65434e96d32da",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88",
         "affectsGlobalScope": false
       },
@@ -2702,33 +2702,13 @@
         "affectsGlobalScope": false
       },
       "../src/main.ts": {
-        "version": "80bd898ac5809e0eccd54c5e5fb90af99626847ae179e01ca433a90b51411849",
+        "version": "21a4a5d84ebfb277fa8d468f15d47a722d85c446bb4752b13b3e97320082ecb4",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
         "affectsGlobalScope": false
       },
       "../src/components/auth/entities/auth.entity.ts": {
         "version": "52320da8efbf293927312346beae923559bd9f7373806959e880588f0b1c7d72",
         "signature": "e8c7c39dc9de6e5290bd6d43ab58c5cc48f4357fb15aa7a061e5971b8ca33a18",
-        "affectsGlobalScope": false
-      },
-      "../src/components/product/product.controller.ts": {
-        "version": "6f0ca5b736c0b49c78fd5bd9e13ebbfe2b2de5c91c9859284313ff97a62b9750",
-        "signature": "37ac6dab5b829d20d0f5f266f9e5e7b10835ba96d029bde56eca1b5f1606ed51",
-        "affectsGlobalScope": false
-      },
-      "../src/components/product/product.model.ts": {
-        "version": "80a0719c818b261100a3b78b370414a6d7c57680f95ac6a6b017d898ec438df8",
-        "signature": "8061acd73e99867e333fc1205b498627cec5ef2f0d8c3826b96a710767da6ba7",
-        "affectsGlobalScope": false
-      },
-      "../src/components/product/product.service.ts": {
-        "version": "5138e046bc26c89b7e5d6aa5b32e5b9af596a2bb876774a2ab4c8eb8847cd0c0",
-        "signature": "b8552c067896c3217fa631b86729829b288de09a39799802d6acc129127ff147",
-        "affectsGlobalScope": false
-      },
-      "../src/components/product/product.module.ts": {
-        "version": "5d8baea7b89c49b7146bb84bde9303bc110f3d6fb9ff3bf755bec2bb102bb0fa",
-        "signature": "775682a30e63deb0ec3da028a66cf4cd3ae032d1b7d009697c8b9329465ef7f5",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/anymatch/index.d.ts": {
@@ -5137,22 +5117,6 @@
         "../node_modules/@nestjs/mapped-types/index.d.ts",
         "../src/components/auth/dto/create-auth.dto.ts"
       ],
-      "../src/components/product/product.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
-      ],
-      "../src/components/product/product.model.ts": [
-        "../node_modules/@nestjs/mongoose/index.d.ts"
-      ],
-      "../src/components/product/product.module.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@nestjs/mongoose/index.d.ts",
-        "../src/components/product/product.controller.ts",
-        "../src/components/product/product.model.ts",
-        "../src/components/product/product.service.ts"
-      ],
-      "../src/components/product/product.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
-      ],
       "../src/components/user/dto/user.dto.ts": [
         "../node_modules/@nestjs/swagger/index.d.ts",
         "../node_modules/class-validator/types/index.d.ts"
@@ -7248,9 +7212,6 @@
       "../src/components/auth/dto/update-auth.dto.ts": [
         "../node_modules/@nestjs/mapped-types/index.d.ts",
         "../src/components/auth/dto/create-auth.dto.ts"
-      ],
-      "../src/components/product/product.model.ts": [
-        "../node_modules/mongoose/index.d.ts"
       ],
       "../src/components/user/entities/user.entities.ts": [
         "../node_modules/mongoose/index.d.ts"

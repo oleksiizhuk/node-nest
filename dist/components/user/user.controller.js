@@ -35,13 +35,13 @@ let UserController = class UserController {
     }
 };
 __decorate([
-    common_1.Get('/'),
+    common_1.Get("/"),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Object)
 ], UserController.prototype, "getUser", null);
 __decorate([
-    common_1.Post('/'),
+    common_1.Post("/"),
     swagger_1.ApiBody({ type: user_dto_1.UserDto }),
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
@@ -49,22 +49,22 @@ __decorate([
     __metadata("design:returntype", Object)
 ], UserController.prototype, "createUser", null);
 __decorate([
-    common_1.Get('/:id'),
-    __param(0, common_1.Param('id')),
+    common_1.Get("/:id"),
+    __param(0, common_1.Param("id")),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "getUserById", null);
 __decorate([
-    common_1.Get('/:email'),
-    __param(0, common_1.Param('email')),
+    common_1.Get("/:email"),
+    __param(0, common_1.Param("email")),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "getUserByEmail", null);
 UserController = __decorate([
-    swagger_1.ApiTags('User'),
-    common_1.Controller('user'),
+    swagger_1.ApiTags("User"),
+    common_1.Controller("user"),
     __metadata("design:paramtypes", [user_service_1.UserService])
 ], UserController);
 exports.UserController = UserController;

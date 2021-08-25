@@ -1,7 +1,7 @@
-import { UserDto } from './dto/user.dto';
+import { UserDto } from "./dto/user.dto";
 import { Model } from "mongoose";
 import { UserEntity } from "./entities/user.entities";
-import { IUser } from './interfaces/user.interfaces';
+import { IUser } from "./interfaces/user.interfaces";
 export declare class UserService {
     private UserDB;
     constructor(UserDB: Model<UserEntity>);

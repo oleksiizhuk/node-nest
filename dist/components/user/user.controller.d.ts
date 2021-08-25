@@ -1,5 +1,5 @@
-import { UserDto } from './dto/user.dto';
-import { UserService } from './user.service';
+import { UserDto } from "./dto/user.dto";
+import { UserService } from "./user.service";
 import { IUser } from "./interfaces/user.interfaces";
 export declare class UserController {
     private readonly userService;

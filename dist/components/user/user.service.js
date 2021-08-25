@@ -21,15 +21,10 @@ let UserService = class UserService {
         this.UserDB = UserDB;
     }
     async getUser() {
-        return this.UserDB
-            .find()
-            .limit(20)
-            .lean();
+        return this.UserDB.find().limit(20).lean();
     }
     async createUser(user) {
-        const createdUser = await this.UserDB.create(user);
-        console.log('createdUser = ', createdUser);
-        return createdUser;
+        return await this.UserDB.create(user);
     }
     async getUserByEmail(email) {
         return this.UserDB.findOne({ email }).lean();
@@ -40,7 +35,7 @@ let UserService = class UserService {
 };
 UserService = __decorate([
     common_1.Injectable(),
-    __param(0, mongoose_2.InjectModel('User')),
+    __param(0, mongoose_2.InjectModel("User")),
     __metadata("design:paramtypes", [mongoose_1.Model])
 ], UserService);
 exports.UserService = UserService;

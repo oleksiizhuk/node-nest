@@ -20,7 +20,7 @@ AppModule = __decorate([
         imports: [
             auth_module_1.AuthModule,
             user_module_1.UserModule,
-            mongoose_1.MongooseModule.forRoot('mongodb+srv://oleksii:223132qq@cluster0.bzoaa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { autoCreate: true })
+            mongoose_1.MongooseModule.forRoot("mongodb+srv://oleksii:223132qq@cluster0.bzoaa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", { autoCreate: true }),
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
