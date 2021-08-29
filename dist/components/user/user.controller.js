@@ -21,11 +21,11 @@ let UserController = class UserController {
     constructor(userService) {
         this.userService = userService;
     }
-    getUser() {
-        return this.userService.getUser();
+    getUsers() {
+        return this.userService.getUsers();
     }
-    createUser(data) {
-        return this.userService.createUser(data);
+    createUser(user) {
+        return this.userService.createUser(user);
     }
     getUserById(id) {
         return this.userService.getUserById(id);
@@ -33,13 +33,19 @@ let UserController = class UserController {
     getUserByEmail(email) {
         return this.userService.getUserByEmail(email);
     }
+    patchUser(id, user) {
+        return this.userService.update(id, user);
+    }
+    delete(id) {
+        return this.userService.delete(id);
+    }
 };
 __decorate([
     common_1.Get("/"),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Object)
-], UserController.prototype, "getUser", null);
+], UserController.prototype, "getUsers", null);
 __decorate([
     common_1.Post("/"),
     swagger_1.ApiBody({ type: user_dto_1.UserDto }),
@@ -62,6 +68,21 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "getUserByEmail", null);
+__decorate([
+    common_1.Patch("/:id"),
+    __param(0, common_1.Param("id")), __param(1, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, user_dto_1.UserDto]),
+    __metadata("design:returntype", Promise)
+], UserController.prototype, "patchUser", null);
+__decorate([
+    common_1.Delete("/:id"),
+    common_1.HttpCode(204),
+    __param(0, common_1.Param("id")),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], UserController.prototype, "delete", null);
 UserController = __decorate([
     swagger_1.ApiTags("User"),
     common_1.Controller("user"),

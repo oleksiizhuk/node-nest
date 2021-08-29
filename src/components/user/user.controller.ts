@@ -18,14 +18,14 @@ import { IUser } from "./interfaces/user.interfaces";
 export class UserController {
   constructor(private readonly userService: UserService) {}
   @Get("/")
-  getUser(): any {
-    return this.userService.getUser();
+  getUsers(): any {
+    return this.userService.getUsers();
   }
 
   @Post("/")
   @ApiBody({ type: UserDto })
-  createUser(@Body() data: UserDto): any {
-    return this.userService.createUser(data);
+  createUser(@Body() user: UserDto): any {
+    return this.userService.createUser(user);
   }
 
   @Get("/:id")

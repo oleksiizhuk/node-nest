@@ -1,26 +1,22 @@
-import { Injectable } from "@nestjs/common";
-import { CreateAuthDto } from "./dto/create-auth.dto";
-import { UpdateAuthDto } from "./dto/update-auth.dto";
+import { BadRequestException, Injectable } from "@nestjs/common";
+import { UserService } from "../user/user.service";
+import { UserDto } from "../user/dto/user.dto";
 
 @Injectable()
 export class AuthService {
-  signIn(user: CreateAuthDto) {
+  constructor(
+      private readonly userService: UserService
+  ) {}
+
+  async signIn(user: UserDto) {
+    const { email } = user;
+    const res = await this.userService.getUserByEmail(email);
+    if (!res) {
+      throw new BadRequestException("invalid credential lol");
+    }
+    if (res.password !== user.password) {
+      throw new BadRequestException("invalid credential lol");
+    }
     return user;
-  }
-
-  getSignIn(user: CreateAuthDto) {
-    return user;
-  }
-
-  findOne(id: number) {
-    return `This action returns a #${id} auth`;
-  }
-
-  update(id: number, updateAuthDto: UpdateAuthDto) {
-    return `This action updates a #${id} auth`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} auth`;
   }
 }

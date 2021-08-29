@@ -1,37 +1,33 @@
 import { Injectable } from "@nestjs/common";
 import { UserDto } from "./dto/user.dto";
-import { Model, Types } from "mongoose";
-import { InjectModel } from "@nestjs/mongoose";
-import { UserEntity } from "./entities/user.entities";
 import { IUser } from "./interfaces/user.interfaces";
+import { UserRepository } from "./user.repository";
 
 @Injectable()
 export class UserService {
-  constructor(@InjectModel("User") private UserDB: Model<UserEntity>) {}
+  constructor(private readonly userRepository: UserRepository) {}
 
-  async getUser(): Promise<IUser[]> {
-    return this.UserDB.find().limit(20).lean();
+  async getUsers(): Promise<IUser[]> {
+    return this.userRepository.getUsers();
   }
 
   async createUser(user: UserDto): Promise<IUser> {
-    return await this.UserDB.create(user);
-  }
-
-  async getUserByEmail(email: string): Promise<IUser> {
-    return this.UserDB.findOne({ email }).lean();
+    return this.userRepository.createUser(user);
   }
 
   async getUserById(id: string): Promise<IUser> {
-    return this.UserDB.findById(Types.ObjectId(id));
+    return this.userRepository.getUserById(id);
+  }
+
+  async getUserByEmail(email: string): Promise<IUser> {
+    return this.userRepository.getUserByEmail(email);
   }
 
   async update(id: string, user: UserDto): Promise<IUser> {
-    return this.UserDB.findByIdAndUpdate(Types.ObjectId(id), user, {
-      new: true,
-    });
+    return this.userRepository.update(id, user);
   }
 
   async delete(id: string): Promise<IUser> {
-    return this.UserDB.findByIdAndRemove(Types.ObjectId(id));
+    return this.userRepository.delete(id);
   }
 }

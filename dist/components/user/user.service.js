@@ -8,35 +8,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserService = void 0;
 const common_1 = require("@nestjs/common");
-const mongoose_1 = require("mongoose");
-const mongoose_2 = require("@nestjs/mongoose");
+const user_repository_1 = require("./user.repository");
 let UserService = class UserService {
-    constructor(UserDB) {
-        this.UserDB = UserDB;
+    constructor(userRepository) {
+        this.userRepository = userRepository;
     }
-    async getUser() {
-        return this.UserDB.find().limit(20).lean();
+    async getUsers() {
+        return this.userRepository.getUsers();
     }
     async createUser(user) {
-        return await this.UserDB.create(user);
-    }
-    async getUserByEmail(email) {
-        return this.UserDB.findOne({ email }).lean();
+        return this.userRepository.createUser(user);
     }
     async getUserById(id) {
-        return this.UserDB.findById(mongoose_1.Types.ObjectId(id));
+        return this.userRepository.getUserById(id);
+    }
+    async getUserByEmail(email) {
+        return this.userRepository.getUserByEmail(email);
+    }
+    async update(id, user) {
+        return this.userRepository.update(id, user);
+    }
+    async delete(id) {
+        return this.userRepository.delete(id);
     }
 };
 UserService = __decorate([
     common_1.Injectable(),
-    __param(0, mongoose_2.InjectModel("User")),
-    __metadata("design:paramtypes", [mongoose_1.Model])
+    __metadata("design:paramtypes", [user_repository_1.UserRepository])
 ], UserService);
 exports.UserService = UserService;
 //# sourceMappingURL=user.service.js.map
