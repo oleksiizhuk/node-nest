@@ -1,20 +1,35 @@
 import { BadRequestException, Injectable } from "@nestjs/common";
 import { UserService } from "../user/user.service";
 import { UserDto } from "../user/dto/user.dto";
+import { JwtService } from "@nestjs/jwt";
 
 @Injectable()
 export class AuthService {
-  constructor(private readonly userService: UserService) {}
+  constructor(
+    private readonly userService: UserService,
+    private jwtService: JwtService
+  ) {}
 
-  async signIn(user: UserDto) {
+  async validateUser(user: UserDto) {
     const { email } = user;
-    const res = await this.userService.getUserByEmail(email);
-    if (!res) {
+    const userFromDb = await this.userService.getUserByEmail(email);
+    if (!userFromDb) {
       throw new BadRequestException("invalid credential lol");
     }
-    if (res.password !== user.password) {
+    if (userFromDb.password !== user.password) {
       throw new BadRequestException("invalid credential lol");
     }
+    return userFromDb;
+  }
+
+  async singIn(user: UserDto): Promise<any> {
+    const payload = { username: user.email };
+    return {
+      access_token: this.jwtService.sign(payload),
+    };
+  }
+
+  async signUp(user: UserDto): Promise<any> {
     return user;
   }
 }

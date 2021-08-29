@@ -14,7 +14,8 @@ export class UserRepository {
   }
 
   async createUser(user: UserDto): Promise<IUser> {
-    return await this.UserDB.create(user);
+    const newUser = { ...user, email: user.email.toLowerCase()};
+    return await this.UserDB.create(newUser);
   }
 
   async getUserById(id: string): Promise<IUser> {

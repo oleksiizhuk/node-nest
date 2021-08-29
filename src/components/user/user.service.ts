@@ -20,7 +20,7 @@ export class UserService {
   }
 
   async getUserByEmail(email: string): Promise<IUser> {
-    return this.userRepository.getUserByEmail(email);
+    return this.userRepository.getUserByEmail(email.toLowerCase());
   }
 
   async update(id: string, user: UserDto): Promise<IUser> {
