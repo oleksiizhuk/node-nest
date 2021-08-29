@@ -4,9 +4,7 @@ import { UserDto } from "../user/dto/user.dto";
 
 @Injectable()
 export class AuthService {
-  constructor(
-      private readonly userService: UserService
-  ) {}
+  constructor(private readonly userService: UserService) {}
 
   async signIn(user: UserDto) {
     const { email } = user;
@@ -20,4 +18,3 @@ export class AuthService {
     return user;
   }
 }
-
