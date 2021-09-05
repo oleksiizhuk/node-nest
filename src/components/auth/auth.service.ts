@@ -2,6 +2,7 @@ import { BadRequestException, Injectable } from "@nestjs/common";
 import { UserService } from "../user/user.service";
 import { UserDto } from "../user/dto/user.dto";
 import { JwtService } from "@nestjs/jwt";
+import SignInDto from "./dto/signIn.dto";
 
 @Injectable()
 export class AuthService {
@@ -10,7 +11,8 @@ export class AuthService {
     private jwtService: JwtService
   ) {}
 
-  async validateUser(user: UserDto) {
+  async validateUser(user: SignInDto) {
+    console.log(" = user", user);
     const { email } = user;
     const userFromDb = await this.userService.getUserByEmail(email);
     if (!userFromDb) {
@@ -22,10 +24,11 @@ export class AuthService {
     return userFromDb;
   }
 
-  async singIn(user: UserDto): Promise<any> {
-    const payload = { username: user.email };
+  async singIn(user: SignInDto) {
+    const userFromDb = this.validateUser(user);
+    console.log("userFromDb = ", userFromDb);
     return {
-      access_token: this.jwtService.sign(payload),
+      access_token: this.jwtService.sign(userFromDb),
     };
   }
 
