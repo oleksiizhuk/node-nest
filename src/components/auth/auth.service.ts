@@ -3,6 +3,7 @@ import { UserService } from "../user/user.service";
 import { UserDto } from "../user/dto/user.dto";
 import { JwtService } from "@nestjs/jwt";
 import SignInDto from "./dto/signIn.dto";
+import { IUser } from "../user/interfaces/user.interfaces";
 
 @Injectable()
 export class AuthService {
@@ -11,8 +12,22 @@ export class AuthService {
     private jwtService: JwtService
   ) {}
 
-  async validateUser(user: SignInDto) {
-    console.log(" = user", user);
+  private decodeJWT(token: string) {
+    const result = this.jwtService.decode(token);
+    if (!result) {
+      throw new BadRequestException({
+        statusCode: 400,
+        message: "Token is invalid",
+      });
+    }
+    return result;
+  }
+
+  async refreshToken(token: string) {
+    return this.decodeJWT(token);
+  }
+
+  async validateUserByEmailPassword(user: SignInDto) {
     const { email } = user;
     const userFromDb = await this.userService.getUserByEmail(email);
     if (!userFromDb) {
@@ -25,14 +40,26 @@ export class AuthService {
   }
 
   async singIn(user: SignInDto) {
-    const userFromDb = this.validateUser(user);
-    console.log("userFromDb = ", userFromDb);
+    const userFromDb = await this.validateUserByEmailPassword(user);
+    const payload = { email: userFromDb.email };
     return {
-      access_token: this.jwtService.sign(userFromDb),
+      user: userFromDb,
+      accessToken: this.jwtService.sign(payload, {
+        secret: "secret",
+        expiresIn: "24h",
+      }),
+      refreshToken: this.jwtService.sign(payload, {
+        secret: "secret",
+        expiresIn: "100h",
+      }),
     };
   }
 
   async signUp(user: UserDto): Promise<any> {
     return user;
+  }
+
+  async getProfile(email: string): Promise<IUser> {
+    return await this.userService.getUserByEmail(email);
   }
 }

@@ -1,4 +1,12 @@
-import { Controller, Post, Body, UseGuards } from "@nestjs/common";
+import {
+  Controller,
+  Post,
+  Body,
+  UseGuards,
+  Headers,
+  Get,
+  Request,
+} from "@nestjs/common";
 import { AuthService } from "./auth.service";
 import { ApiTags } from "@nestjs/swagger";
 import { UserDto } from "../user/dto/user.dto";
@@ -10,6 +18,19 @@ import SignInDto from "./dto/signIn.dto";
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
+  @Post("/refreshToken")
+  refreshToke(@Headers() headers: any) {
+    const { authorization } = headers;
+    return this.authService.refreshToken(authorization.split(" ")[1]);
+  }
+
+  @UseGuards(AuthGuard("jwt"))
+  @Get("profile")
+  getProfile(@Request() req) {
+    return this.authService.getProfile(req.user.email.email);
+  }
+
+  @UseGuards(AuthGuard("local"))
   @Post("/signIn")
   signIn(@Body() user: SignInDto) {
     return this.authService.singIn(user);

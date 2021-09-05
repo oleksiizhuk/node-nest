@@ -3,6 +3,7 @@ import { AppModule } from "./components/app/app.module";
 import { SwaggerModule, DocumentBuilder } from "@nestjs/swagger";
 import { ValidationPipe } from "@nestjs/common";
 import * as helmet from "helmet";
+declare const module: any;
 
 const bootstrap = async () => {
   const app = await NestFactory.create(AppModule, { cors: false });
@@ -20,6 +21,10 @@ const bootstrap = async () => {
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup("api", app, document);
   await app.listen(3000);
+  if (module.hot) {
+    module.hot.accept();
+    module.hot.dispose(() => app.close());
+  }
 };
 
 bootstrap();
