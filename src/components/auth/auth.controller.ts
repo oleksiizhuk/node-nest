@@ -8,7 +8,7 @@ import {
   Request,
 } from "@nestjs/common";
 import { AuthService } from "./auth.service";
-import { ApiTags } from "@nestjs/swagger";
+import { ApiBearerAuth, ApiTags } from "@nestjs/swagger";
 import { UserDto } from "../user/dto/user.dto";
 import { AuthGuard } from "@nestjs/passport";
 import SignInDto from "./dto/signIn.dto";
@@ -24,6 +24,7 @@ export class AuthController {
     return this.authService.refreshToken(authorization.split(" ")[1]);
   }
 
+  @ApiBearerAuth()
   @UseGuards(AuthGuard("jwt"))
   @Get("profile")
   getProfile(@Request() req) {
