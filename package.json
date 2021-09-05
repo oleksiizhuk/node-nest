@@ -6,6 +6,7 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
+    "testt": "nest start",
     "start:demon": "webpack --config webpack.config.js --watch",
     "prebuild": "rimraf dist",
     "build": "nest build",
@@ -74,7 +75,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "eslint . --max-warnings=0",
+      "pre-commit": "npm run testt",
       "pre-push": "eslint . --max-warnings=0"
     }
   },
