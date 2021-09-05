@@ -9,17 +9,19 @@ import {
   HttpCode,
   UseGuards,
 } from "@nestjs/common";
-import { ApiBody, ApiTags } from "@nestjs/swagger";
+import { ApiBody, ApiBearerAuth, ApiTags } from "@nestjs/swagger";
 import { UserDto } from "./dto/user.dto";
 import { UserService } from "./user.service";
 import { IUser } from "./interfaces/user.interfaces";
 import { AuthGuard } from "@nestjs/passport";
+import JwtAuthGuard from "../auth/guards/jwt-auth.guard";
 
 @ApiTags("User")
 @Controller("user")
 export class UserController {
   constructor(private readonly userService: UserService) {}
-  @UseGuards(AuthGuard("jwt"))
+  @UseGuards(JwtAuthGuard)
+  @ApiBearerAuth()
   @Get("/")
   getUsers(): any {
     return this.userService.getUsers();
@@ -31,6 +33,8 @@ export class UserController {
     return this.userService.createUser(user);
   }
 
+  @UseGuards(AuthGuard("jwt"))
+  @ApiBearerAuth()
   @Get("/:id")
   getUserById(@Param("id") id: string): Promise<IUser> {
     return this.userService.getUserById(id);
