@@ -1,4 +1,4 @@
-import { Document, Types } from "mongoose";
+import { Document } from "mongoose";
 
 export class UserEntity extends Document {
   readonly name: string;
