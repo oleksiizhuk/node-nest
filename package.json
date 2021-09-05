@@ -6,7 +6,6 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "lint": "eslint .",
     "start:demon": "webpack --config webpack.config.js --watch",
     "prebuild": "rimraf dist",
     "build": "nest build",
@@ -15,7 +14,7 @@
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
-//    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
@@ -75,7 +74,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "eslint . --max-warnings=0",
+      "pre-commit": "npm run lint",
       "pre-push": "eslint . --max-warnings=0"
     }
   },
