@@ -55,7 +55,7 @@ export class AuthService {
     };
   }
 
-  async signUp(user: UserDto): Promise<any> {
+  async signUp(user: UserDto): Promise<IUser> {
     return user;
   }
 

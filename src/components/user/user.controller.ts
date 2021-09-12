@@ -23,14 +23,17 @@ export class UserController {
   @UseGuards(JwtAuthGuard)
   @ApiBearerAuth()
   @Get("/")
-  getUsers(): any {
+  getUsers(): Promise<IUser[]> {
     return this.userService.getUsers();
   }
 
   @Post("/")
   @ApiBody({ type: UserDto })
-  createUser(@Body() user: UserDto): any {
-    return this.userService.createUser(user);
+  createUser(@Body() user: UserDto): Promise<IUser> {
+    return this.userService.createUser({
+      ...user,
+      email: user.email.toLowerCase(),
+    });
   }
 
   @UseGuards(AuthGuard("jwt"))

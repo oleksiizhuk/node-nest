@@ -18,7 +18,7 @@ import SignInDto from "./dto/signIn.dto";
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
-  @Post("/refreshToken")
+  @Post("/refresh-token")
   refreshToke(@Headers() headers: any) {
     const { authorization } = headers;
     return this.authService.refreshToken(authorization.split(" ")[1]);
@@ -32,13 +32,13 @@ export class AuthController {
   }
 
   @UseGuards(AuthGuard("local"))
-  @Post("/signIn")
+  @Post("/sign-in")
   signIn(@Body() user: SignInDto) {
     return this.authService.singIn(user);
   }
 
   @UseGuards(AuthGuard("local"))
-  @Post("/signUp")
+  @Post("/sign-up")
   signUp(@Body() user: UserDto) {
     return this.authService.signUp(user);
   }
